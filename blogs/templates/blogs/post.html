@@ -1,0 +1,15 @@
+{% extends 'blogs/base.html' %}
+
+{% block content %}
+
+	<h1>{{ post.title }}</h1>
+
+	<ul>
+		<li> Text: <br> {{ post.text }}</li>
+		<li> Date added: <br>{{ post.date_added }}</li>
+		<a href="{% url 'blogs:edit_post' post.id %}">edit post</a>
+	</ul>
+
+	<a href="{% url 'blogs:posts' %}" style="color: grey">Back</a>
+	
+{% endblock content %}
